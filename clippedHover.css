@@ -1,0 +1,65 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background: #222; 
+}
+
+
+.container { 
+    position: relative; 
+    width: 500px; 
+    height: 476px; 
+    border: 2px solid ghostwhite; 
+    box-shadow: 0.5em 0.5em 2em #000;
+}
+
+
+.container .box { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+}
+
+
+.container .box:nth-child(1)
+{
+    background: url(img1.jpg); 
+    background-size: cover;
+    /* clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%); */
+    /* Dit is de fout - Img 1 heeft GEEN clip-path */
+}
+
+ 
+.container .box:nth-child(2)
+{
+    background: url(img2.jpg); 
+    z-index: 2; 
+    transition: 0.5s; 
+    background-size: cover;
+   
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);*/
+}
+
+
+.container .box:nth-child(2):hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+}
+
+
+.container .box:nth-child(1):hover ~
+.box:nth-child(2)
+{
+  
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+}
