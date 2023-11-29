@@ -44,8 +44,7 @@ body {
     background-size: cover;
    
     clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
-    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);*/
-}
+ }
 
 
 .container .box:nth-child(2):hover {
