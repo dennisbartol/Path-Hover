@@ -33,8 +33,6 @@ body {
 {
     background: url(img1.jpg); 
     background-size: cover;
-    /* clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%); */
-    /* Dit is de fout - Img 1 heeft GEEN clip-path */
 }
 
  
